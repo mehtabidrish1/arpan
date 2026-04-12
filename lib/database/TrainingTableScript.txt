@@ -1,0 +1,242 @@
+USE [ArpanMIS_DBTest]
+GO
+/****** Object:  Table [dbo].[MasterStaff]    Script Date: 1/23/2023 5:27:50 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[MasterStaff](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[EmpID] [varchar](6) NOT NULL,
+	[StaffType] [int] NULL,
+	[SMName] [varchar](200) NOT NULL,
+	[SMMName] [varchar](200) NULL,
+	[SMLName] [varchar](200) NULL,
+	[ExternalCompany] [varchar](100) NULL,
+	[Gender] [int] NULL,
+	[DOB] [datetime] NULL,
+	[BloodGroup] [varchar](5) NULL,
+	[JoiningDate] [datetime] NULL,
+	[TotalExperience] [float] NULL,
+	[PreferredArea] [varchar](100) NULL,
+	[Country] [int] NULL,
+	[State] [int] NULL,
+	[City] [int] NULL,
+	[Password] [varchar](50) NULL,
+	[DesignationID] [int] NULL,
+	[MobileNo] [varchar](10) NULL,
+	[AlternateMobileNo] [varchar](10) NULL,
+	[EmailID] [varchar](50) NULL,
+	[AlternateEmailID] [varchar](50) NULL,
+	[ProfileImage] [varchar](50) NULL,
+	[CurrentAddress] [varchar](1000) NULL,
+	[PermanentAddress] [varchar](1000) NULL,
+	[PinCode] [varchar](10) NULL,
+	[Specialization] [varchar](100) NULL,
+	[Qualification] [varchar](100) NULL,
+	[IMEI#01] [varchar](50) NULL,
+	[IMEI#02] [varchar](50) NULL,
+	[MacID] [varchar](50) NULL,
+	[OldEmpCode] [varchar](50) NULL,
+	[DateImportedHR] [datetime] NULL,
+	[Department] [varchar](100) NULL,
+	[JobLevel] [varchar](100) NULL,
+	[Hiringsource] [varchar](100) NULL,
+	[PIName] [varchar](100) NULL,
+	[Nationality] [varchar](50) NULL,
+	[Languageproficiency] [varchar](50) NULL,
+	[MaritalStatus] [int] NULL,
+	[SpouseName] [varchar](50) NULL,
+	[SpouseProfession] [varchar](50) NULL,
+	[ChildrenNo] [varchar](10) NULL,
+	[FatherName] [varchar](50) NULL,
+	[FatherProfession] [varchar](50) NULL,
+	[FatherAge] [varchar](10) NULL,
+	[MotherName] [varchar](50) NULL,
+	[MotherProfession] [varchar](50) NULL,
+	[MotherAge] [varchar](10) NULL,
+	[PrimaryName] [varchar](50) NULL,
+	[SecondaryName] [varchar](50) NULL,
+	[PrimaryRelationship] [varchar](50) NULL,
+	[SecondaryRelationship] [varchar](50) NULL,
+	[PrimaryPhone] [varchar](10) NULL,
+	[SecondaryPhone] [varchar](10) NULL,
+	[PrimaryAddress] [varchar](1000) NULL,
+	[SecondaryAddress] [varchar](1000) NULL,
+	[PrimaryCity] [varchar](50) NULL,
+	[SecondaryCity] [varchar](50) NULL,
+	[Fromto] [varchar](50) NULL,
+	[Fromto1] [varchar](50) NULL,
+	[Organization] [varchar](100) NULL,
+	[Organization1] [varchar](100) NULL,
+	[KeyResponsibilities] [varchar](100) NULL,
+	[KeyResponsibilities1] [varchar](100) NULL,
+	[Position] [varchar](100) NULL,
+	[Position1] [varchar](100) NULL,
+	[Salary] [varchar](50) NULL,
+	[Salary1] [varchar](50) NULL,
+	[LeavingReason] [varchar](300) NULL,
+	[LeavingReason1] [varchar](300) NULL,
+	[Reference1] [varchar](200) NULL,
+	[Reference2] [varchar](200) NULL,
+	[AadharNo] [varchar](12) NULL,
+	[PanNo] [varchar](10) NULL,
+	[IsAadhar] [bit] NULL,
+	[IsPan] [bit] NULL,
+	[IsOther] [bit] NULL,
+	[PIcheck] [bit] NULL,
+	[Active] [bit] NOT NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL,
+	[UpdatedOn] [datetime] NULL,
+	[Team] [varchar](200) NULL,
+ CONSTRAINT [PK_MasterStaff] PRIMARY KEY CLUSTERED 
+(
+	[EmpID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Training_Registration]    Script Date: 1/23/2023 5:27:50 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Training_Registration](
+	[RegistrationGuid] [uniqueidentifier] NOT NULL,
+	[ScheduleGuid] [varchar](100) NULL,
+	[Establishment] [varchar](50) NULL,
+	[ParticipantEstablishment] [varchar](max) NULL,
+	[ParticipantEstablishmentName] [varchar](max) NULL,
+	[TrainingDate] [varchar](max) NULL,
+	[MediumofInstruction] [varchar](max) NULL,
+	[MediumofInstructionName] [varchar](max) NULL,
+	[TrainingTheme] [varchar](max) NULL,
+	[TrainingThemeName] [varchar](max) NULL,
+	[TopicsCovered] [varchar](max) NULL,
+	[TopicsCoveredName] [varchar](max) NULL,
+	[Trainer] [varchar](max) NULL,
+	[TrainerName] [varchar](max) NULL,
+	[TrainingCode] [varchar](100) NULL,
+	[PreSurveyId] [varchar](100) NULL,
+	[PostSurveyId] [varchar](100) NULL,
+	[FeedbackSurveyId] [varchar](100) NULL,
+	[Active] [bit] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Training_Schedule]    Script Date: 1/23/2023 5:27:50 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Training_Schedule](
+	[ScheduleGuid] [uniqueidentifier] NOT NULL,
+	[CommunicationYear] [varchar](50) NULL,
+	[Year] [varchar](50) NULL,
+	[TrainingApproach] [varchar](50) NULL,
+	[TrainingType] [varchar](50) NULL,
+	[TrainingName] [varchar](50) NULL,
+	[TypeOfGroup] [varchar](50) NULL,
+	[Establishment] [varchar](50) NULL,
+	[ParticipantEstablishment] [varchar](max) NULL,
+	[ParticipantEstablishmentName] [varchar](max) NULL,
+	[ModeOfTraining] [varchar](50) NULL,
+	[Duration] [varchar](50) NULL,
+	[FirstDate] [datetime] NULL,
+	[LastDate] [datetime] NULL,
+	[MediumofInstruction] [varchar](max) NULL,
+	[MediumofInstructionName] [varchar](max) NULL,
+	[TrainingTheme] [varchar](max) NULL,
+	[TrainingThemeName] [varchar](max) NULL,
+	[TopicsCovered] [varchar](max) NULL,
+	[TopicsCoveredName] [varchar](max) NULL,
+	[Trainer] [varchar](max) NULL,
+	[TrainerName] [varchar](max) NULL,
+	[OtherTheme] [varchar](200) NULL,
+	[Active] [bit] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL,
+ CONSTRAINT [PK_TrainingSchedule] PRIMARY KEY CLUSTERED 
+(
+	[ScheduleGuid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Training_Schedule_ParticipantEstablishment]    Script Date: 1/23/2023 5:27:50 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Training_Schedule_ParticipantEstablishment](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ScheduleGuid] [varchar](100) NULL,
+	[EstablishmentCode] [varchar](50) NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Training_Schedule_ParticitantList]    Script Date: 1/23/2023 5:27:50 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Training_Schedule_ParticitantList](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ScheduleGuid] [varchar](100) NULL,
+	[FirstName] [varchar](50) NULL,
+	[LastName] [varchar](50) NULL,
+	[Email] [varchar](50) NULL,
+	[RegistrationTime] [varchar](50) NULL,
+	[ApprovalStatus] [varchar](50) NULL,
+	[PhoneNo] [varchar](50) NOT NULL,
+	[Gender] [varchar](50) NULL,
+	[City] [varchar](50) NULL,
+	[Zip_Postal_PinCode] [varchar](50) NULL,
+	[OrganisationName] [varchar](50) NULL,
+	[ParticipantProfile] [varchar](50) NULL,
+	[Attended_Arpan_session_ChildSexualAbuse] [varchar](50) NULL,
+	[Month_Year_Attend_Session] [varchar](50) NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL,
+	[PhoneNoTen] [varchar](50) NULL,
+ CONSTRAINT [PK_Training_Schedule_Particitant] PRIMARY KEY CLUSTERED 
+(
+	[PhoneNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO

@@ -1,0 +1,16 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "launch": {
+        
+        "inputs": [],
+        "configurations": [],
+        "compounds": []
+    },
+    // "dart.flutterSdkPath": "C:\\flutter", 
+  "[dart]": {
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true,
+      "editor.detectIndentation": false,
+      "editor.suggest.insertMode": "replace"
+  }
+}
